@@ -19,6 +19,7 @@ mod devbridge;
 mod editor;
 mod events;
 mod export;
+mod first_frame;
 mod folders;
 mod git;
 mod hosts;
@@ -161,6 +162,11 @@ pub fn run() {
                 .title("Haunt")
                 .inner_size(1440.0, 920.0)
                 .min_inner_size(900.0, 600.0);
+            // The page's own colour from the first frame, not white while the page loads.
+            let builder = match first_frame::color(&repos.info().appearance) {
+                Some(color) => builder.background_color(color),
+                None => builder,
+            };
             // The tabs are the title bar: on macOS over the system's traffic lights, elsewhere with Haunt's own window
             // buttons and no system frame (the shadow keeps the edges for resizing).
             #[cfg(target_os = "macos")]

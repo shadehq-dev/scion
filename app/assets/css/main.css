@@ -77,3 +77,24 @@
   color: var(--shiki-dark, inherit);
   font-style: var(--shiki-dark-font-style, inherit);
 }
+
+/* Haunt's ghost while the app starts: #__nuxt stays empty until the app has mounted. No background of its own, so it
+   floats on the colour the window opened on (src-tauri/src/first_frame.rs), in a grey that reads on light and dark. */
+#__nuxt:empty::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 72px;
+  height: 72px;
+  background-color: rgb(128 128 128 / 0.45);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='160 160 704 704'%3E%3Cpath fill-rule='evenodd' d='M272 440 A240 240 0 0 1 752 440 V800 Q712 860 672 800 T592 800 T512 800 T432 800 T352 800 T272 800 Z M386 450 a44 60 0 1 0 88 0 a44 60 0 1 0 -88 0 Z M550 450 a44 60 0 1 0 88 0 a44 60 0 1 0 -88 0 Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  animation: haunt-float 1.6s ease-in-out infinite alternate;
+}
+@keyframes haunt-float {
+  from { transform: translateY(4px); opacity: 0.6; }
+  to { transform: translateY(-4px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #__nuxt:empty::before { animation: none; }
+}

@@ -2608,7 +2608,7 @@ dependencies = [
 
 [[package]]
 name = "haunt"
-version = "0.3.1"
+version = "0.3.2"
 dependencies = [
  "gix",
  "notify",

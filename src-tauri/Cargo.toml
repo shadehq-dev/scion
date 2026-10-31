@@ -1,6 +1,6 @@
 [package]
 name = "haunt"
-version = "0.3.1"
+version = "0.3.2"
 description = "A live, clickable map of a TypeScript codebase"
 edition = "2021"
 license = "Apache-2.0"

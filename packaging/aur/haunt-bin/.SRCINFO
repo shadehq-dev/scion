@@ -1,6 +1,6 @@
 pkgbase = haunt-bin
 	pkgdesc = A git client that maps the code: every function, what calls it, and what a change touches
-	pkgver = 0.3.1
+	pkgver = 0.3.2
 	pkgrel = 1
 	url = https://github.com/RazerGhost/haunt
 	arch = x86_64
@@ -24,10 +24,10 @@ pkgbase = haunt-bin
 	conflicts = haunt
 	options = !strip
 	options = !debug
-	source = Haunt_0.3.1_amd64.deb::https://github.com/RazerGhost/haunt/releases/download/v0.3.1/Haunt_0.3.1_amd64.deb
-	source = LICENSE-0.3.1::https://raw.githubusercontent.com/RazerGhost/haunt/v0.3.1/LICENSE
-	source = NOTICE-0.3.1::https://raw.githubusercontent.com/RazerGhost/haunt/v0.3.1/NOTICE
-	sha256sums = d6a817cc71849518ea779f3050fc08f011ded1a4cb332ddc5f18c04341b09adb
+	source = Haunt_0.3.2_amd64.deb::https://github.com/RazerGhost/haunt/releases/download/v0.3.2/Haunt_0.3.2_amd64.deb
+	source = LICENSE-0.3.2::https://raw.githubusercontent.com/RazerGhost/haunt/v0.3.2/LICENSE
+	source = NOTICE-0.3.2::https://raw.githubusercontent.com/RazerGhost/haunt/v0.3.2/NOTICE
+	sha256sums = eb9b1daa2d8ad47062949f312b037b0af558e6f820c82341f422421de0279992
 	sha256sums = 62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a
 	sha256sums = 5e4bf42e4aa198b5f3bcbc874b13c750d7ed99523d8380a9ceac57964bfb02ca
 
